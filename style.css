@@ -1,0 +1,119 @@
+@font-face {
+    font-family: milk_font;
+    src: url(fonts/Milk\ Kids.ttf)
+}
+@font-face {
+   font-family: nexa_font;
+   src: url(fonts/NexaText-Trial-ExtraLight.ttf);
+}
+* {
+    color: white;
+    font-size: 1.2em;
+}
+body {
+    background-color: rgb(24, 24, 24);  
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+li, a {
+    font-weight: 1000;
+    text-decoration: none; 
+    list-style: none;
+    font-family: "milk_font";
+}
+header {
+    display: flex;
+    justify-content: space-between; 
+    padding: 30px;
+    font-family: "milk_font";
+}
+button {
+    background-color: green;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer
+    font-family: "milk_font";
+}
+a button {
+    font-family: "milk_font";
+    cursor: pointer;
+}
+button:hover {
+    background-color: lightgreen;
+}
+a:hover {
+    color: gray;
+}
+.aboutthedevs_nav li {
+    display: inline-block; 
+    padding: 10px;
+    font-family: "milk_font";
+}
+.gameinfo {
+    margin: 0px 690px;
+    font-size: 32px;
+    font-family: "milk_font";
+}
+.gamename a {
+    color: green;
+    font-size: 1.6em;
+    text-align: center;
+    font-family: "milk_font";
+}
+.gamename a:hover { 
+    color: lightgreen;
+}
+.about_us {
+    display: flex; 
+    justify-content: center;
+}
+.about_us a {
+    margin: 0px 40px;
+    font-family: "milk_font";   
+}
+#titel_homepagina {
+    color: white;
+    font-family: "milk_font";
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#code_game img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    height: 40%;
+    border-radius: 50px;
+}
+#welcome_text {
+    width: 600px;
+    display: flex;
+    margin: auto;
+}
+#welcome_text p {
+    color: white;
+    font-family: "nexa_font";
+    font-size: x-large;
+    text-align: center;
+}
+#welcome_text strong {
+    font-family: "nexa_font"
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #272727;
+    border-top: 2px solid #FFFFFF;
+    padding: 40px 40px 30px;
+}
+footer p{
+    color: white;
+    font-size: 25px;
+    padding: 20px 0px;
+    font-family: "nexa_font";
+}
