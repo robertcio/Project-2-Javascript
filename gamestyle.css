@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+
+canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 3px solid white;
+}
+
+.restart {
+    margin: 850px 850px;
+    color: white;
+    background-color: black;
+    border-color: white;
+    font-size: 32px;
+    width: 125px;
+    height: 75px;
+}
+
+.restart:hover {
+ color: black;
+ background-color: white;
+ cursor: pointer;
+ 
+}
+
