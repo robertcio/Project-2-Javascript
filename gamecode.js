@@ -28,19 +28,19 @@ let TempoY = 0;
 //keys voor de slang om te bewegen
 
 function SnakeMovement(e) {
-    if (e.code == "ArrowUp" && TempoY != 1) {
+    if (e.code == "ArrowUp") {
         TempoX = 0;
         TempoY = -1;
     }
-    else if (e.code == "ArrowDown" && TempoY != -1) {
+    else if (e.code == "ArrowDown") {
         TempoX = 0;
         TempoY = 1;
     }
-    else if (e.code == "ArrowLeft" && TempoX != 1) {
+    else if (e.code == "ArrowLeft") {
         TempoX = -1;
         TempoY = 0;
     }
-    else if (e.code == "ArrowRight" && TempoX != -1) {
+    else if (e.code == "ArrowRight") {
         TempoX = 1;
         TempoY = 0;
     }
