@@ -59,7 +59,6 @@
     display: block;
     text-align: center;
     letter-spacing: 1px;
-    color: green;
     font-family: "milk_font";
     font-weight: bold;
     font-size: 70px;
@@ -77,6 +76,7 @@
     text-align: center;
     font-size: 25px;
     font-family: "nexa_font";
+    color: green;
   }
   h3 {
     display: block;
