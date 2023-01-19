@@ -1,18 +1,18 @@
 body {
-    background-color: black;
+    background-color: rgb(24, 24, 24);
 }
 
 canvas {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
     border: 3px solid white;
 }
 
 .restart {
-    margin: 850px 850px;
+    margin: 10px 850px;
     color: white;
     background-color: black;
     border-color: white;
@@ -28,3 +28,18 @@ canvas {
  
 }
 
+#score {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+    color: white;
+    font-size: 128px;
+}
+
+p {
+    margin-top: 800px;
+    margin-left: 300px;
+    align-items: center;
+    font-size: 32px;
+    color: white;
+}

@@ -7,6 +7,7 @@ let ctx;
 let SnakeX = BlockSize * 5;
 let SnakeY = BlockSize * 5;
 
+let score = 0;
 let death = false;
 
 //speelveld 
@@ -28,19 +29,19 @@ let TempoY = 0;
 //keys voor de slang om te bewegen
 
 function SnakeMovement(e) {
-    if (e.code == "ArrowUp" && TempoY != 1) {
+    if (e.code == "ArrowUp") {
         TempoX = 0;
         TempoY = -1;
     }
-    else if (e.code == "ArrowDown" && TempoY != -1) {
+    else if (e.code == "ArrowDown") {
         TempoX = 0;
         TempoY = 1;
     }
-    else if (e.code == "ArrowLeft" && TempoX != 1) {
+    else if (e.code == "ArrowLeft") {
         TempoX = -1;
         TempoY = 0;
     }
-    else if (e.code == "ArrowRight" && TempoX != -1) {
+    else if (e.code == "ArrowRight") {
         TempoX = 1;
         TempoY = 0;
     }
@@ -61,7 +62,7 @@ function update() {
         return;
     }
 
-    //placements voor slang en appel
+    //placements voor slang en appel & canvas
 
     ctx.fillStyle="black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -69,20 +70,23 @@ function update() {
     ctx.fillStyle="red";
     ctx.fillRect(AppleX, AppleY, BlockSize, BlockSize);
 
-    //appel replacement
-    if (SnakeX == AppleX && SnakeY == AppleY) {
-        AppleBlock();
-    }
-    
     ctx.fillStyle="blue";
     SnakeX += TempoX * BlockSize;
     SnakeY += TempoY * BlockSize;
     ctx.fillRect(SnakeX, SnakeY, BlockSize, BlockSize);
 
-    //slang gaat dood als hij uit de border gaat
+    //score +1 wanner de appel en slang op dezelfde positie zitten en dan veranderd de appel van plaats
 
-    if (SnakeX < 0 || SnakeX > columns*BlockSize || SnakeY < 0 || SnakeY > rows*BlockSize) {
+    if (SnakeX == AppleX && SnakeY == AppleY) {
+        score += 1;
+        document.getElementById("score").innerHTML = score.toString();
+        AppleBlock();
+    }
+
+    //slang gaat dood als hij uit de border gaat en dan zie je je score
+
+    if (SnakeX < 0 || SnakeY < 0 || SnakeX > columns*BlockSize || SnakeY > rows*BlockSize) {
         death = true;
+        alert("Je bent dood! Score: " + score );
     }
 }
-
